@@ -3,13 +3,13 @@ function showAlertAndRedirect(action) {
     let url;
     switch (action) {
         case 'buy':
-            url = 'https://example.com/buy';
+            url = 'buy.html';
             break;
         case 'sell':
             url = 'https://example.com/sell';
             break;
         case 'loan':
-            url = 'https://example.com/loan';
+            url = 'https://example.com/borrow';
             break;
         default:
             url = '#';

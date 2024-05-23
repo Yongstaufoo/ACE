@@ -1,24 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Roboto+Slab:wght@400;700&display=swap');
 
-body {
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
     font-family: 'Roboto', sans-serif;
+}
+
+body {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    justify-content: space-between; /* Default for buy.html */
     background-color: #f3f3f3;
     text-align: center;
 }
 
+.centered-body {
+    justify-content: center;
+}
+
 .container {
+    flex: 1;
     text-align: center;
+    padding: 2em;
 }
 
 h1 {
     font-family: 'Roboto Slab', serif;
-    font-size: 3em;
+    font-size: 2.5em;
     color: #232f3e;
     font-weight: 700;
     margin: 0;
@@ -26,20 +39,44 @@ h1 {
 
 .sub-header {
     font-family: 'Roboto', sans-serif;
-    font-size: 1.75em;
+    font-size: 1.5em;
     color: #232f3e;
     margin-top: 0.5em;
     font-weight: 700;
 }
 
-.button-container {
+.content {
     margin-top: 1.5em;
+}
+
+.content p {
+    font-size: 1.25em;
+    color: #232f3e;
+}
+
+.search-bar-container {
+    margin: 1.5em 0;
+    text-align: center;
+}
+
+.search-bar {
+    width: 80%;
+    max-width: 500px;
+    padding: 0.75em;
+    font-size: 1.25em;
+    border: 2px solid #232f3e;
+    border-radius: 8px;
+    outline: none;
+}
+
+.search-bar:focus {
+    border-color: #ff9900;
 }
 
 .button {
     display: inline-block;
     padding: 1em 2em;
-    margin: 0.5em;
+    margin-top: 1.5em;
     font-size: 1.25em; /* Larger font size */
     color: white;
     background-color: #ff9900; /* Bright color */
@@ -55,14 +92,46 @@ h1 {
     background-color: #e68a00;
 }
 
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+    margin-top: 2em;
+}
+
+.card {
+    background-color: white;
+    padding: 1.5em;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.card h3 {
+    font-size: 1.5em;
+    color: #232f3e;
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+}
+
+.card p {
+    font-size: 1em;
+    color: #666;
+}
+
 footer {
     background-color: #232f3e;
     color: white;
     padding: 1em 2em;
     text-align: center;
-    position: absolute;
-    bottom: 0;
     width: 100%;
+    position: relative;
+    bottom: 0;
 }
 
 .disclaimer {
@@ -70,3 +139,4 @@ footer {
     line-height: 1.5;
     margin: 0;
 }
+
