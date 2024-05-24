@@ -7,9 +7,19 @@ document.addEventListener("DOMContentLoaded", function() {
         const remaining = maxChars - description.value.length;
         charCount.textContent = `${remaining} characters remaining`;
     });
-});
 
-document.addEventListener("DOMContentLoaded", function() {
+    const form = document.querySelector('form');
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevents the default form submission behavior
+        alert("Form submitted successfully!");
+
+        form.reset(); // Clears all the form fields
+
+        // Optionally, reset the character count display
+        charCount.textContent = '200 characters remaining';
+    });
+
     const buyButton = document.querySelector('.button[href="buy.html"]');
     const sellButton = document.querySelector('.button[href="sell.html"]');
     const loanButton = document.querySelector('.button[href="loan.html"]');
