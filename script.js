@@ -16,13 +16,3 @@ function showAlertAndRedirect(action) {
     }
     window.location.href = url;
 }
-document.addEventListener("DOMContentLoaded", function() {
-    const description = document.getElementById('description');
-    const charCount = document.getElementById('char-count');
-    const maxChars = 200;
-
-    description.addEventListener('input', function() {
-        const remaining = maxChars - description.value.length;
-        charCount.textContent = `${remaining} characters remaining`;
-    });
-});
