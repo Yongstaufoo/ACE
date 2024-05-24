@@ -8,7 +8,7 @@ function showAlertAndRedirect(action) {
         case 'sell':
             url = 'sell.html';
             break;
-        case 'loan':
+        case 'borrow':
             url = 'borrow.html';
             break;
         default:
