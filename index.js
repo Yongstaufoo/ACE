@@ -1,5 +1,5 @@
 function showAlertAndRedirect(action) {
-    alert("NOTE: To prevent scams, ONLY communicate through user's work email.");
+    alert("NOTE: To prevent scams, only communicate through work emails.");
     let url;
     switch (action) {
         case 'buy':
